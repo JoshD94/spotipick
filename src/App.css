@@ -1,0 +1,268 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.body {
+  background-color: black;
+  height: 1000px;
+}
+
+.generate-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #282c34;
+  color: white;
+  font-weight: bold;
+}
+
+.generate-button:active {
+  transform: scale(1.05);
+}
+
+.generating-spinner {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.header {
+  width: 100%;
+  background-color: #282c34;
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(5px + 2vmin);
+  color: white;
+}
+
+.item-pool-div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 400px;
+}
+
+.item-pool-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 22px;
+  margin: 5px;
+  font-size: 15px;
+}
+
+
+.play-button-circle, .pause-button-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #282c34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button-triangle {
+  width: 0;
+  height: 0;
+  border-bottom:7px solid transparent;
+  border-top: 7px solid transparent;
+  border-left: 12px solid white;
+  margin-left: 3px;
+}
+
+.play-div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.pause-button-bars {
+  width: 11px;
+  height: 11px;
+  background-color: white;
+}
+
+.results-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  background-color: black;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  border: none;
+}
+
+.search-bar:focus {
+  outline: none;
+}
+
+.search-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+}
+
+.search-button:hover {
+  background-color: #f2f2f2;
+}
+
+.search-element-artist {
+  font-size: 12px;
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden ;
+  text-overflow: ellipsis;
+  margin-left: 5px;
+}
+
+.search-element-div {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.search-element-div:hover {
+  background-color: #f2f2f2;
+}
+
+.search-element-text {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden ;
+  text-overflow: ellipsis;
+  width: 250px;
+  margin-left: 5px;
+}
+
+.search-div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  width: 400px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: solid #282c34 1.5px;
+  background-color: white;
+}
+
+.search-results {
+  width: 400px;
+  max-height: 400px;
+  background-color: rgb(250, 250, 250);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top: none;
+  position: fixed;
+  z-index: 50;
+}
+
+.song-artist-dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 50px;
+  border: none;
+  border-radius: 5px;
+}
+
+.song-artist-dropdown:focus {
+  outline: none;
+}
+
+.song-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.song-image{
+  border-radius: 5px;
+  margin: 20px;
+  margin-bottom: 0px;
+  width: 340px;
+}
+
+.song-title {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.song-title:hover {
+  color: grey;
+}
+
+.song-artist {
+  font-size: 15px;
+  margin-top: 0px;
+}
+
+.song-audio {
+  margin-bottom: 20px;
+  height: 40px;
+}
+
+.song-audio-error {
+  margin-top: -10px;
+  margin-bottom: -10px;
+  height: 40px;
+  color: #282c34;
+  font-size: small;
+}
+
