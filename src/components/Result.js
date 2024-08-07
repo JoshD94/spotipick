@@ -27,7 +27,10 @@ function Result(props) {
       Result.audio = null;
     }
     try {
-      await fetch("34.145.157.101/api/spotipy/recommendations/", requestOptions)
+      await fetch(
+        "https://34.145.157.101/api/spotipy/recommendations/",
+        requestOptions
+      )
         .then((response) => response.json())
         .then((data) => {
           setSongs(data.songs);
