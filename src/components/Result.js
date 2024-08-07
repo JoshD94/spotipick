@@ -28,7 +28,7 @@ function Result(props) {
     }
     try {
       await fetch(
-        "http://34.145.157.101/api/spotipy/recommendations/",
+        "https://34.145.157.101/api/spotipy/recommendations/",
         requestOptions
       )
         .then((response) => response.json())
@@ -48,6 +48,10 @@ function Result(props) {
   let song_id = "";
   const autoplay_preview_duration = 10;
   //TODO: make duration editable by user
+  //TODO: make clicking on title more obvious
+  //TODO: brush up UI
+  //TODO: implement song tracker
+  //TODO: use environment variables to store API key
 
   function play() {
     Result.audio.play();
