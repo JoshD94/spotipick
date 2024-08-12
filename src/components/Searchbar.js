@@ -12,7 +12,7 @@ function Searchbar({ sendData }) {
   async function fetch_data() {
     if (input !== "") {
       try {
-        await fetch("https://34.145.157.101/api/spotipy/search/", {
+        await fetch("https://spotipick.space/api/spotipy/search/", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

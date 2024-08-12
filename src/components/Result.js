@@ -28,7 +28,7 @@ function Result(props) {
     }
     try {
       await fetch(
-        "https://34.145.157.101/api/spotipy/recommendations/",
+        "https://spotipick.space/api/spotipy/recommendations/",
         requestOptions
       )
         .then((response) => response.json())
@@ -46,20 +46,28 @@ function Result(props) {
   let next_song = songs[0];
   const [active_song, setActiveSong] = useState(null);
   let song_id = "";
-  const autoplay_preview_duration = 10;
+  const autoplay_preview_duration = 20;
   //TODO: make duration editable by user
   //TODO: make clicking on title more obvious
   //TODO: brush up UI
   //TODO: implement song tracker
   //TODO: use environment variables to store API key
+  //TODO: generate pauses song
+  //TODO: dropdown during scroll
 
   function play() {
     Result.audio.play();
     Result.interval = setInterval(() => {
       next_song = songs[song_ids.indexOf(song_id) + 1];
+      if (next_song === undefined) {
+        next_song = songs[0];
+      }
       next_song_null = next_song["Preview URL"] === null;
       while (next_song_null) {
         next_song = songs[song_ids.indexOf(next_song["Track ID"]) + 1];
+        if (next_song === undefined) {
+          next_song = songs[0];
+        }
         next_song_null = next_song["Preview URL"] === null;
       }
       clearInterval(Result.interval);
@@ -76,11 +84,11 @@ function Result(props) {
     clearInterval(Result.interval);
     if (s !== active_song) {
       // different song clicked or new song autoplayed
-      setActiveSong(s);
-      song_id = s;
       if (Result.audio) {
         Result.audio.pause();
       }
+      setActiveSong(s);
+      song_id = s;
       Result.audio = new Audio(a);
       play();
     } else {
